@@ -21,9 +21,8 @@ for HOSTS_IP in ${HOSTS} ; do
     echo '#### UPDATE VMS '${green}${USERNAME}@${HOSTNAME}${reset}
     
  # ssh-copy-id to username@ip_addreses
-  sshpass -p $PSSWD ssh-copy-id -o "StrictHostKeyChecking no" -i /home/super_admin/.ssh/id_rsa.pub ${USERNAME}@${HOSTS_IP}
+echo "yes \n" | sshpass -p $PSSWD ssh-copy-id -o StrictHostKeyChecking=no -f  ${USERNAME}@${HOSTNAME}
 
-  
 
 
 done;
